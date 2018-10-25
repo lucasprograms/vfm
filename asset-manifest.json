@@ -1,7 +1,7 @@
 {
   "main.css": "/vfm/static/css/main.56ada38c.chunk.css",
-  "main.js": "/vfm/static/js/main.5211293b.chunk.js",
-  "main.js.map": "/vfm/static/js/main.5211293b.chunk.js.map",
+  "main.js": "/vfm/static/js/main.23b825f0.chunk.js",
+  "main.js.map": "/vfm/static/js/main.23b825f0.chunk.js.map",
   "static/css/1.26991c2c.chunk.css": "/vfm/static/css/1.26991c2c.chunk.css",
   "static/js/1.9da844d4.chunk.js": "/vfm/static/js/1.9da844d4.chunk.js",
   "static/js/1.9da844d4.chunk.js.map": "/vfm/static/js/1.9da844d4.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.26991c2c.chunk.css.map": "/vfm/static/css/1.26991c2c.chunk.css.map",
   "static/css/main.56ada38c.chunk.css.map": "/vfm/static/css/main.56ada38c.chunk.css.map",
   "index.html": "/vfm/index.html",
-  "precache-manifest.4e2b0afd4733f6428ed88abb4b1af03a.js": "/vfm/precache-manifest.4e2b0afd4733f6428ed88abb4b1af03a.js",
+  "precache-manifest.d8273d61d104c08ee8fde5df886bd121.js": "/vfm/precache-manifest.d8273d61d104c08ee8fde5df886bd121.js",
   "service-worker.js": "/vfm/service-worker.js"
 }
