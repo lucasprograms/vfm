@@ -8,7 +8,6 @@ import { buildBuildingPopupContent, buildFiberPopupContent } from './popupConten
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow
@@ -17,7 +16,7 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 // end workaround
 
-const ACCESS_TOKEN = 'pk.eyJ1IjoibHVjYXNwcm9ncmFtcyIsImEiOiJjam5tMjU3Z24wM3BlM2ttcTZ5ZjMwYnltIn0.ir86s_pB8sUlmyoMXpOk4A'
+const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN
 
 const fiberStyles = (feature) => {
   // console.log([...new Set(fiberCables.features.map(cable => cable.properties.OWNER))]) //<-- find distinct owners of cable
@@ -57,6 +56,6 @@ export default () => {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox.streets',
-      accessToken: ACCESS_TOKEN
+      accessToken: MAPBOX_TOKEN
   }).addTo(map);
 }
