@@ -50,20 +50,29 @@ const addFiberCables = (map) =>
     }
   }).addTo(map)
 
-const buildMapTiles = (map) => {
+const buildMapTiles = (type) =>
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
-      id: 'mapbox.streets',
+      id: 'mapbox.' + type,
       accessToken: MAPBOX_TOKEN
-  }).addTo(map);
-}
+  })
 
-export default () => {
+
+
+export default (mapType) => {
   let map = L.map('map')
   map._layersMaxZoom = 19 // workaround for layer being added before maxzoom is defined.
   map = map.setView([45.2538, -69.4455], 7)
   map = addFiberCables(map)
   addLitBuildingClusters(map)
-  buildMapTiles(map)
+  const streetTiles = buildMapTiles('streets')
+  const satelliteTiles = buildMapTiles('satellite')
+  map.addLayer(mapType === 'street' ? streetTiles : satelliteTiles)
+
+  return {
+    map,
+    streetTiles,
+    satelliteTiles
+  }
 }

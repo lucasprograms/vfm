@@ -83,3 +83,26 @@ body {
 .key__entry .key__square.key__square--other {
   background-color: gray;
 }
+
+.map-type-selector {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  height: 100px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  z-index: 10000;
+  background-color: rgba(204, 204, 204, 0.5);
+}
+
+.map-type-selector .map-type-selector__title {
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.map-type-selector .map-type-selector__option {
+  margin-top: 5px;
+  margin-left: 25px;
+}
